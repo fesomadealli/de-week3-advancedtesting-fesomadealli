@@ -1,0 +1,11 @@
+order_id,timestamp,item,quantity,price,total,payment_status
+ORD001,2025-10-19T08:00:00Z,Wireless Mouse,2,$15.99,$31.98,paid
+ORD002,2025-10-19 08:05,Laptop Sleeve,1,12.50,12.50,PAID
+ORD003,19/10/2025 08:10 AM,USB Cable,-3,5usd,15,pending
+ORD004,2025-10-19T08:15:00Z,Wireless Mouse,2pcs,$16,$32.00,paid
+ORD005,2025-10-19T08:20:00Z,,1,45 dollars,45,refunded
+ORD006,2025/10/19T08:25Z,Phone Case,3,N2000,N6000,PAID
+ORD007,2025-10-19T08:30:00Z,Power Bank,N/A,$25,$50,Paid
+ORD008,2025-10-19T08:35:00Z,Charger,2,N4500,N9000,pending
+ORD009,2025-10-19T08:40:00Z,Webcam,1,$29.99,,PAID
+ORD010,2025-10-19T08:45:00Z,Mouse Pad,5,3,15,refunded

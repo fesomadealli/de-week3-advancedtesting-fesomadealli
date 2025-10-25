@@ -1,0 +1,27 @@
+[
+  {
+    "item": "mouse pad",
+    "total_quantity": 5.0,
+    "total_revenue": 15.0
+  },
+  {
+    "item": "wireless mouse",
+    "total_quantity": 4.0,
+    "total_revenue": 63.98
+  },
+  {
+    "item": "phone case",
+    "total_quantity": 3.0,
+    "total_revenue": 6000.0
+  },
+  {
+    "item": "power bank",
+    "total_quantity": 2.0,
+    "total_revenue": 50.0
+  },
+  {
+    "item": "charger",
+    "total_quantity": 2.0,
+    "total_revenue": 9000.0
+  }
+]

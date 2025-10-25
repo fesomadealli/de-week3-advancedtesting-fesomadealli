@@ -1,0 +1,58 @@
+[
+  {
+    "item": "charger",
+    "total_quantity": 2.0,
+    "total_revenue": 9000.0,
+    "average_price": 4500.0,
+    "price_std_dev": 0.0,
+    "orders": 1
+  },
+  {
+    "item": "phone case",
+    "total_quantity": 3.0,
+    "total_revenue": 6000.0,
+    "average_price": 2000.0,
+    "price_std_dev": 0.0,
+    "orders": 1
+  },
+  {
+    "item": "wireless mouse",
+    "total_quantity": 4.0,
+    "total_revenue": 63.98,
+    "average_price": 16.0,
+    "price_std_dev": 0.01,
+    "orders": 2
+  },
+  {
+    "item": "power bank",
+    "total_quantity": 2.0,
+    "total_revenue": 50.0,
+    "average_price": 25.0,
+    "price_std_dev": 0.0,
+    "orders": 1
+  },
+  {
+    "item": "webcam",
+    "total_quantity": 1.0,
+    "total_revenue": 29.99,
+    "average_price": 29.99,
+    "price_std_dev": 0.0,
+    "orders": 1
+  },
+  {
+    "item": "mouse pad",
+    "total_quantity": 5.0,
+    "total_revenue": 15.0,
+    "average_price": 3.0,
+    "price_std_dev": 0.0,
+    "orders": 1
+  },
+  {
+    "item": "laptop sleeve",
+    "total_quantity": 1.0,
+    "total_revenue": 12.5,
+    "average_price": 12.5,
+    "price_std_dev": 0.0,
+    "orders": 1
+  }
+]

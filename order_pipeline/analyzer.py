@@ -14,7 +14,10 @@ class ShoplinkAnalyzer:
         pass
 
 
-    def aggregate_by_item(self, records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def aggregate_by_item(self, 
+                          records: List[Dict[str, Any]]
+                          ) -> List[Dict[str, Any]]:
+        
         grouped = defaultdict(list)
         for r in records:
             grouped[r["item"]].append(r)
@@ -40,7 +43,10 @@ class ShoplinkAnalyzer:
 
 
 
-    def aggregate_by_status(self, records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def aggregate_by_status(self, 
+                            records: List[Dict[str, Any]]
+                            ) -> List[Dict[str, Any]]:
+        
         status_group = defaultdict(list)
         for r in records:
             status_group[r["payment_status"]].append(r)
@@ -59,7 +65,12 @@ class ShoplinkAnalyzer:
 
 
 
-    def top_sellers(self, records: List[Dict[str, Any]], by: str = "quantity", top_n: int = 5) -> List[Dict[str, Any]]:
+    def top_sellers(self, 
+                    records: List[Dict[str, Any]], 
+                    by: str = "quantity", 
+                    top_n: int = 5
+                    ) -> List[Dict[str, Any]]:
+        
         grouped = defaultdict(lambda: {"quantity": 0.0, "total": 0.0})
         for r in records:
             grouped[r["item"]]["quantity"] += r["quantity"]
@@ -77,7 +88,11 @@ class ShoplinkAnalyzer:
 
 
 
-    def detect_price_anomalies(self, records: List[Dict[str, Any]], threshold: float = 0.25) -> List[Dict[str, Any]]:
+    def detect_price_anomalies(self, 
+                               records: List[Dict[str, Any]], 
+                               threshold: float = 0.25
+                               ) -> List[Dict[str, Any]]:
+        
         grouped = defaultdict(list)
         for r in records:
             grouped[r["item"]].append(r["price"])

@@ -8,7 +8,10 @@ from order_pipeline.analyzer import ShoplinkAnalyzer
 
 session_log = set()
 
-def load_data(path="shoplink/sales_data/cleaned.json"):
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+path_to_json = put_json = ROOT_DIR / "transformed.json"
+
+def load_data(path=path_to_json):
     try:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -67,6 +70,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, table)
         print("\n🏆 Best Selling Items")
         print(tabulate(analyzer.top_sellers(records, by="total", top_n=5), headers="keys", tablefmt="fancy_grid"))
+        return True
 
     elif choice == "2":
         title = "Price Anomalies"
@@ -77,6 +81,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, table)
         print("\n📉 Price Anomalies")
         print(table)
+        return True
 
     elif choice == "3":
         title = "Peak Sales Hours"
@@ -88,6 +93,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, table)
         print("\n⏰ Peak Sales Hours")
         print(table)
+        return True
 
     elif choice == "4":
         title = "Money Tracker"
@@ -106,6 +112,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, summary)
         print("\n💸 Money Tracker")
         print(summary)
+        return True
 
     elif choice == "5":
         title = "Daily Sales"
@@ -117,6 +124,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, table)
         print("\n📅 Daily Sales")
         print(table)
+        return True
 
     elif choice == "6":
         title = "Item Frequency"
@@ -128,6 +136,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, table)
         print("\n🔁 Item Frequency")
         print(table)
+        return True
 
     elif choice == "7":
         title = "Refund Loss"
@@ -138,6 +147,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, summary)
         print("\n💸 Refund Loss")
         print(summary)
+        return True
 
     elif choice == "8":
         title = "Conversion Rate"
@@ -148,6 +158,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, summary)
         print("\n📈 Conversion Rate")
         print(summary)
+        return True
 
     elif choice == "9":
         title = "Average Order Value"
@@ -158,6 +169,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, summary)
         print("\n💰 Average Order Value")
         print(summary)
+        return True
 
     elif choice == "10":
         title = "High-Value Orders"
@@ -168,6 +180,7 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, table)
         print("\n💎 High-Value Orders (₦100+)")
         print(table)
+        return True
 
     elif choice == "11":
         title = "Payment Status Summary"
@@ -178,10 +191,15 @@ def run_insight(choice, records, analyzer):
             write_to_file(title, table)
         print("\n💳 Payment Status Summary")
         print(table)
+        return True
 
     elif choice == "12":
         print("\n👋 Session ended. Your insights report has been saved to 'shoplink_insights.txt'.")
         return False
+    
+    else:
+        print("❌ Invalid choice. Please select a valid option from the menu.")
+        return True
 
 
 def main():

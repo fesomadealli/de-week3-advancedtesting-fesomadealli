@@ -49,6 +49,7 @@ class ShoplinkETL:
             "summary": summary,
             "top_items": top_items,
             "anomalies": anomalies,
+            "transformed": transformed
         }
 
         for name, data in export_items.items():

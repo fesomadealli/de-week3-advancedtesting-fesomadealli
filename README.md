@@ -139,6 +139,49 @@ This pipeline ensures:
 - **Data-driven decision making**
 - **Customer satisfaction** through order accuracy
 
+## Bonus
+
+## 📦 Shoplink BI — Business Insights CLI
+
+**Shoplink BI** is a simple command-line application that helps you analyze your Shoplink sales data and generate business insights. It reads a transformed JSON dataset and provides various metrics, including best-selling items, price anomalies, peak sales hours, and more. All insights are also saved to a text report for later reference.
+
+### Features
+
+* View **Best Selling Items** and top products by sales.
+* Detect **Price Anomalies** with more than 25% variance.
+* Analyze **Peak Sales Hours** to understand customer activity.
+* Track **Money Metrics** including refund losses, conversion rate, and average order value.
+* Review **Daily Sales** and revenue trends.
+* Inspect **Item Frequency** to see which products are most popular.
+* Monitor **Refund Losses** and **High-Value Orders** (₦100+).
+* Summarize **Payment Status** across all orders.
+* **Automatically logs all insights** to `shoplink_insights.txt` with timestamps.
+
+### How It Works
+
+1. Place your cleaned or transformed sales data in JSON format (default: `transformed.json`).
+2. Run the CLI:
+
+```bash
+python insights/cli_app/insights.py
+```
+
+3. Select the insight you want from the menu by entering a number.
+4. Insights are printed in a **tabular format** and also written to `shoplink_insights.txt`.
+5. Select **Exit (12)** to end the session.
+
+### File Logging
+
+* All insights are saved to **`shoplink_insights.txt`** in the same folder as the CLI script.
+* Each entry includes a **timestamp** and the **insight title**.
+* This allows you to keep a running report of your business data over time.
+
+### Requirements
+
+* Python 3.10+
+* `tabulate` library: install via `pip install tabulate`
+* JSON sales data file (default: `transformed.json`)
+
 ---
 
 *Built with production-grade reliability for ShopLink's growing marketplace ecosystem.*
